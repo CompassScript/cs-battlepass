@@ -1,0 +1,201 @@
+:root{
+  --mainBackground: #181818;
+  --btnBackgroundColor: #000;
+  --btnBackgroundHoverColor: #000;
+  --btnTextHoverColor: rgb(197, 197, 197);
+  --btnNavbarColor: #ffffff;
+  --statusAreaTextColor: #ffffff;
+  --btnAwardBackgroundColor: #e91b67;
+  --btnAwardColor: #fff;
+  --btnAwardBackgroundColorHover: #89113d;
+  --btnAwardColorHover: #fff;
+  --rewardSlotTextColor: white;
+}
+
+body {
+  display: none;
+}
+
+* {padding: 0; margin: 0; font-family: 'Montserrat', sans-serif;}
+.outer {
+  display: table;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.middle {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.inner {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80vw;
+  border-radius: 1rem;
+}
+
+.glass {
+  background: rgba(255,255,255,0.5);
+    border-radius: 20px;
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--btnTextColor);
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn-navbar {
+  width: 25%;
+  height: 25%;
+  font-weight: 600;
+  margin-right: auto;
+  margin-left: auto;
+  color: var(--btnNavbarColor);
+  border-bottom: 1px solid #ffffff;
+  border-radius: 0;
+}
+
+.btn-navbar:hover{
+  color: var(--btnTextHoverColor);
+  box-shadow: 0px 1px 0px 0px var(--btnTextHoverColor);
+  border-bottom: 1px solid var(--btnTextHoverColor);
+}
+
+.btn-award{
+  background-color: var(--btnAwardBackgroundColor);
+  color: var(--btnAwardColor);
+  width: 100%;
+  position: relative;
+}
+
+.btn-award::after{
+  content: '';
+  position: absolute;
+  width: 150%;
+  height: 0.175rem;
+  background: hsl(0, 0%, 100%);
+  bottom: 0;
+  left: -25%;
+  transform: scale(0,1);
+}
+
+.btn-award:hover::after{
+  transform: scale(1,2);
+  transition: transform 0.7s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.btn-award:hover{
+  background-color: var(--btnAwardBackgroundColorHover);
+  color: var(--btnAwardColorHover);
+}
+
+.desc-awards{
+  font-weight: 100;
+  width: 100%;
+  height: 30vh;
+  overflow-y: auto;
+  overflow-wrap: break-word;
+}
+
+.desc-awards p:nth-child(2){
+  margin-top: 1rem;
+}
+
+.nav-bar{
+  display: flex;
+}
+
+.rewardPool{
+  width: 97%;
+  padding: 1rem 1rem;
+}
+
+.rewardsArea {
+  width: 100%;
+  display: flex;
+  overflow-x: overlay;
+}
+
+.rewardsArea::-webkit-scrollbar {
+  display: none;
+}
+
+.reward-number{
+  background: white;
+  font-weight: 600;
+  color: #000;
+}
+
+.reward-image img {
+  width: 100px;
+  height: 100px;
+}
+.reward-slot{
+  width: 10vw;
+  border-radius: 0.7rem;
+  text-align: center;
+  overflow: hidden;
+  font-weight: 600;
+  flex: 0 0 10vw;
+  color: var(--rewardSlotTextColor);
+  margin-right: 1rem;
+}
+
+.status-area{
+  display: flex;
+  padding: 1rem 1rem;
+  justify-content: space-between;
+  font-weight: 600;
+  border-bottom: 1px solid #ffffff;
+  color: var(--statusAreaTextColor);
+}
+
+.status-right{
+  text-align: end;
+}
+
+.status-left{
+  text-align: start;
+}
+
+.desc-awards p {
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+::-webkit-scrollbar {
+  width: 0.4rem;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(94, 93, 93, 0); 
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(221, 221, 221); 
+  border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
