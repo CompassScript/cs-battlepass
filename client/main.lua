@@ -19,7 +19,7 @@ AddEventHandler('tickBattlepasstime', function(premiumState)
     end)
 end)
 
-RegisterCommand("asd", function(src)
+RegisterCommand(Config.openMenuCommand, function(src)
     TriggerServerEvent("getDBPassData")
 end)
 
