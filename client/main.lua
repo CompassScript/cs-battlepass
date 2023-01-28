@@ -63,6 +63,8 @@ AddEventHandler('notifyUser', function(types, msg)
             })
         elseif Config.Notification == 'codem' then
             TriggerEvent('codem-notification', msg.msg, msg.time, "info")
+	elseif Config.Notification == 'qbnotify' then
+	    QBCore.Functions.Notify(msg.msg, 'info', msg.time)
         elseif Config.Notification == 'mythic' then
 
         end
