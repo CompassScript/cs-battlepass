@@ -12,7 +12,7 @@ Config.getSharedObject = 'esx:getSharedObject' -- You can set this to esx:getSha
 Config.openMenuCommand = 'menu'
 Config.openMenuButton = 28
 
-Config.Notification = 'okok' -- You can set okok, codem, esxdefault, pNotify, tNotify
+Config.Notification = 'okok' -- You can set okok, codem, esxdefault, pNotify, tNotify, qbnotify
 Config.ClaimSuccess = {title = 'Success', msg = 'You ve claimed this item. GJ', time = 10000}
 Config.ClaimDenied = {title = 'Error', msg = 'You have already claimed this award before.', time = 10000}
 Config.notEnoughLV = {title = 'Error', msg = 'You dont have enough points, try again.', time = 10000}
